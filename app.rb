@@ -15,3 +15,8 @@ get('/list') do
   erb(:list)
 end
 
+get('/detail/:id') do
+  "#{params[:id]}"
+  erb(:detail)
+end
+

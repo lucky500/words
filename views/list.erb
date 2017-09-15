@@ -2,6 +2,9 @@
 
 <% @words_list.each do |k, v| %>
   <li>
-    <%= "#{k}, #{v.join','}" %>
+    <a href='detail/<%= "#{k}" %>'>
+      <%= "#{k}" %>
+    </a>
+    <%= "#{v[0]}" %>
   </li>
 <% end %>
