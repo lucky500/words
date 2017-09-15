@@ -1,7 +1,7 @@
 require('pry')
 
 class Words
-  @words = {}
+
   def initial_words 
     @words = {
       "obtuse" => ['annoyingly insensitive or slow to understand.'],
@@ -13,5 +13,5 @@ class Words
       "demagogue" => ['a leader who seeks support by appealing to popular passions'],
       "tsar" => ['a person appointed by government to advise on and coordinate policy in a particular area']
     }
-  end
+  end 
 end
