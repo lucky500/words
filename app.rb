@@ -17,6 +17,8 @@ end
 
 get('/detail/:id') do
   "#{params[:id]}"
+  @words_list = Words.new()
+  @words_list = @words_list.initial_words
   erb(:detail)
 end
 

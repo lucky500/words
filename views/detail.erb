@@ -2,4 +2,11 @@
 
 <h4>The first definition is: </h4>
   <ul>
+    <% @words_list.each do |k, v| %>
+    <% if params[:id] == k %>
+      <li>
+        <%= "#{v[0]}" %>
+      </li>
+      <% end %>
+    <% end %>
   </ul>

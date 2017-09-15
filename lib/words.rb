@@ -4,7 +4,7 @@ class Words
 
   def initial_words 
     @words = {
-      "obtuse" => ['annoyingly insensitive or slow to understand.', 'blob'],
+      "obtuse" => ['annoyingly insensitive or slow to understand.'],
       "brittle" => ['hard but liable to break or shatter easily'],
       "acumen" => ['shrewdness shown by keen insight'],
       "adverse" => ['in an opposing direction'],
