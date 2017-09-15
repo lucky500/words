@@ -2,6 +2,6 @@
 
 <% @words_list.each do |k, v| %>
   <li>
-    <%= k %>
+    <%= "#{k}, #{v.join','}" %>
   </li>
 <% end %>
