@@ -5,8 +5,21 @@
     <% @words_list.each do |k, v| %>
     <% if params[:id] == k %>
       <li>
-        <%= "#{v[0]}" %>
+        <%= "#{v[0]}" %>  
+      </li>
+      <li>
+        <%= @new_definition %>  
       </li>
       <% end %>
     <% end %>
   </ul>
+
+<h3>Would you like to add an additional definition?</h3>
+
+<form>
+  <div>
+    <label for="definition">New Definition: </label>
+    <input type="text" name="new_definition" class="definition">
+    <button type="submit" class="btn">Add</button>
+  </div>
+</form>

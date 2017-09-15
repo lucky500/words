@@ -22,3 +22,7 @@ get('/detail/:id') do
   erb(:detail)
 end
 
+post "/detail/:id" do
+    @new_definition = params[:new_definition]
+    erb(:detail)
+end
