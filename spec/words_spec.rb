@@ -31,7 +31,7 @@ describe(Word) do
   end
 
   describe("#id") do
-    it("increments an id by 1 each time a new item is added") do
+    it("increments an id by 1 each time a new word is added") do
       word = Word.new({:word => 'obtuse', :definition => 'annoyingly insensitive or slow to understand.'})
       word.save()
       word2 = Word.new({:word => 'tsar', :definition => 'a person appointed by government to advise on and coordinate policy in a particular area'})
@@ -42,7 +42,7 @@ describe(Word) do
   end
 
   describe(".find") do
-    it("finds an item based on its id") do
+    it("finds an word based on its id") do
       word = Word.new({:word => 'obtuse', :definition => 'annoyingly insensitive or slow to understand.'})
       word.save()
       word2 = Word.new({:word => 'tsar', :definition => 'a person appointed by government to advise on and coordinate policy in a particular area'})

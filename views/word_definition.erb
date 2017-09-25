@@ -1,10 +1,19 @@
-<h1>Words</h1>
-
-<% @words_list.each do |k, v| %>
-  <li>
-    <a href='detail/<%= "#{k}" %>'>
-      <%= "#{k}" %>
-    </a>
-    <%= "#{v[0]}" %>
-  </li>
-<% end %>
+<div class="container">
+  <hr>
+  <h3><%= @word.word %></h3>
+  <hr>
+  <% @word.definitions.each do |definition| %>
+    <h5><%= definition %></h5>
+  <% end %>
+  <hr>
+  <form  action="/definitions/<%= @word.id %>" method="post">
+    <label for="definition">Add Definition:</label>
+    <input id="definition" type="text" name="definition">
+    <button type="submit" name="button">Add Definition</button>
+  </form>
+  <a href="/">
+  <button type="button" name="button">
+    Home
+  </button>
+</a>
+</div>
