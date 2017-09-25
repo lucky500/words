@@ -1,17 +1,39 @@
 require('pry')
 
-class Words
+class Word
+  @@words =[]
 
-  def initial_words 
-    @words = {
-      "obtuse" => ['annoyingly insensitive or slow to understand.'],
-      "brittle" => ['hard but liable to break or shatter easily'],
-      "acumen" => ['shrewdness shown by keen insight'],
-      "adverse" => ['in an opposing direction'],
-      "ambivalent" => ['uncertain or unable to decide about what course to follow'],
-      "complement" => ['something added to embellish or make perfect'],
-      "demagogue" => ['a leader who seeks support by appealing to popular passions'],
-      "tsar" => ['a person appointed by government to advise on and coordinate policy in a particular area']
-    }
-  end 
+  attr_reader(:id)
+  attr_accessor(:word, :definition)
+
+  def initialize(attributes)
+    @word = attributes.fetch(:word)
+    @definitions = []
+    @id = @@words.length + 1
+  end
+
+  def self.all()
+    @@words
+  end
+
+  def save
+    @@words.push(self)
+  end
+
+  def self.clear
+    @@words = []
+  end
+
+  def add_definition(definition)
+    @definitions.push(definition)
+  end
+
+  def self.find(id)
+    word_id = id.to_i()
+    @@words.each do |word|
+      if word.id == word_id
+        return word
+      end
+    end
+  end
 end
