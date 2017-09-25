@@ -40,4 +40,16 @@ describe(Word) do
       expect(word2.id()).to(eq(2))
     end
   end
+
+  describe(".find") do
+    it("finds an item based on its id") do
+      word = Word.new({:word => 'obtuse', :definition => 'annoyingly insensitive or slow to understand.'})
+      word.save()
+      word2 = Word.new({:word => 'tsar', :definition => 'a person appointed by government to advise on and coordinate policy in a particular area'})
+      word2.save()
+      word2.save()
+      expect(Word.find(1)).to(eq(word))
+      expect(Word.find(2)).to(eq(word2))
+    end
+  end
 end
