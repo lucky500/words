@@ -1,14 +1,12 @@
 require('rspec')
 require('words')
 
-# describe (".clear") do
-#   it("is an empty hash at first") do
-#     words = Words.new()
-#     expect(words.initial_words).to(eq({}))
-#   end
-# end
-
 describe(Word) do
+  before() do
+    Word.clear()
+  end
+
+
   describe(".all") do
     it("is empty at first") do
       expect(Word.all()).to(eq([]))
